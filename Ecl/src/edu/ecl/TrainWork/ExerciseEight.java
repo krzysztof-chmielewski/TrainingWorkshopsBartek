@@ -7,6 +7,7 @@ public class ExerciseEight {
         int secondFormText = 13;
         double firstProductPrice = (double) firstFormText;
         double secondProductPrice = (double) secondFormText;
+        double sadadas = (double) secondFormText;
 
         System.out.println("Wartość pierwszej liczby zmiennoprzecinkowej to: " + firstProductPrice);
     }
