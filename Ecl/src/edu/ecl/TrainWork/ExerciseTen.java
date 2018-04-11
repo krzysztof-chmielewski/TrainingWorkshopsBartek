@@ -1,25 +1,23 @@
 package edu.ecl.TrainWork;
 
 public class ExerciseTen {
-    static int[] prices1 = {4, 9};
-    static int[] prices2 = new int[2];
+    private static double[] arrayPrices1 = {4, 9};
+    private static double[] arrayprices2 = new double[2];
 
-    static double calc1() {
-        return (double) (prices1[0] + prices1[1]) / prices1.length;
-    }
-
-    static double calc2() {
-        prices2[0] = 5;
-        prices2[1] = 6;
-        return (double) (prices2[0] + prices2[1]) / prices2.length;
+    private double averageExample(double[] numbers) {
+        return (numbers[0] + numbers[1]) / numbers.length;
     }
 
     public static void main(String[] args) {
+        ExerciseTen obj = new ExerciseTen();
 
-        System.out.println("Table initialized with values assigned to it, when table is created: " + prices1[0] + ", " + prices1[1]);
-        System.out.println("Table initialized with values provided one by one: " + prices2[0] + ", " + prices2[1]);
+        arrayprices2[0] = 5;
+        arrayprices2[1] = 6;
 
-        System.out.println("\nAverage calculated from values from first table = " + calc1());
-        System.out.println("Average calculated from values from first table = " + calc2());
+        System.out.println("Table initialized with values assigned to it, when table is created: " + arrayPrices1[0] + ", " + arrayPrices1[1]);
+        System.out.println("Table initialized with values provided one by one: " + arrayprices2[0] + ", " + arrayprices2[1]);
+
+        System.out.println("\nAverage calculated from values from first table = " + obj.averageExample(arrayPrices1));
+        System.out.println("Average calculated from values from first table = " + obj.averageExample(arrayprices2));
     }
 }
