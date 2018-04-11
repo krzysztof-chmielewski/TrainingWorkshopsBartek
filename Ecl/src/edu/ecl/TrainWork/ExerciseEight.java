@@ -1,7 +1,6 @@
 package edu.ecl.TrainWork;
 
 public class ExerciseEight {
-
     public static void main(String[] args) {
         String firstFormText = "12.99";
         String secondFormText = "13.49";

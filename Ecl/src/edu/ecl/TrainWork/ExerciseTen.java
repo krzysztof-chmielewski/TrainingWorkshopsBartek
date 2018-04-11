@@ -1,13 +1,6 @@
 package edu.ecl.TrainWork;
 
 public class ExerciseTen {
-    private static double[] arrayPrices1 = {4, 9};
-    private static double[] arrayprices2 = new double[2];
-
-    private double averageExample(double[] numbers) {
-        return (numbers[0] + numbers[1]) / numbers.length;
-    }
-
     public static void main(String[] args) {
         ExerciseTen obj = new ExerciseTen();
 
@@ -19,5 +12,12 @@ public class ExerciseTen {
 
         System.out.println("\nAverage calculated from values from first table = " + obj.averageExample(arrayPrices1));
         System.out.println("Average calculated from values from first table = " + obj.averageExample(arrayprices2));
+    }
+
+    private static double[] arrayPrices1 = {4, 9};
+    private static double[] arrayprices2 = new double[2];
+
+    private double averageExample(double[] numbers) {
+        return (numbers[0] + numbers[1]) / numbers.length;
     }
 }
