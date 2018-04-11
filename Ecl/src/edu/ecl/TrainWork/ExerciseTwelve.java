@@ -12,7 +12,6 @@ public class ExerciseTwelve {
         System.out.println("Average price of products: " + help1.calculateAverage(avPrice));
     }
 
-
     private double[] convertion(String[] characterToNumber) {
         double[] result = new double[characterToNumber.length];
         for (int i = 0; i < result.length; i++) {
@@ -20,3 +19,4 @@ public class ExerciseTwelve {
         }
         return result;
     }
+}
