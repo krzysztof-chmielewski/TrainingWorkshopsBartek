@@ -1,5 +1,6 @@
 package edu.ecl.TrainWork;
 
+/*
 public class ExerciseFourteen {
     public static void main(String[] args) {
         String formInput = "100 ; 200";
@@ -29,3 +30,5 @@ public class ExerciseFourteen {
         return (double) sum / products.length;
     }
 }
+*/
+

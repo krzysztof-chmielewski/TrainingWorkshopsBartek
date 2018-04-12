@@ -1,11 +1,11 @@
 package edu.ecl.TrainWork;
-/*
-public class ExerciseThirteen {
-    public static void main(String[] args) {
-        ExerciseThirteen helperObjectToConvertAndCalc = new ExerciseThirteen();
 
-        String formInput = "5 ; 8 ; 12 ; 17 ; 23 ; 27";
+public class ExerciseFifteen {
+    public static void main(String[] args) {
+        String formInput = "100 ; 200";
         String[] result = formInput.split(";");
+
+        ExerciseFifteen helperObjectToConvertAndCalc = new ExerciseFifteen();
         Product[] avPrice = helperObjectToConvertAndCalc.convertion(result);
 
         System.out.println("Average price of products: " + helperObjectToConvertAndCalc.calculateAverage(avPrice));
@@ -14,8 +14,10 @@ public class ExerciseThirteen {
     private Product[] convertion(String[] characterToNumber) {
         Product[] result = new Product[characterToNumber.length];
         for (int i = 0; i < result.length; i++) {
-            result[i] = new Product();
-            result[i].price = Double.valueOf(characterToNumber[i]);
+            result[i] = new Product(Double.valueOf(characterToNumber[i]), 0.23d );
+
+            /*result[i].price = Double.valueOf(characterToNumber[i]);
+            result[i].tax = 0.23d;*/
         }
         return result;
     }
@@ -23,8 +25,8 @@ public class ExerciseThirteen {
     public double calculateAverage(Product[] products) {
         int sum = 0;
         for (int i = 0; i < products.length; i++) {
-            sum += products[i].price;
+            sum += products[i].CalculateGrossPrice();
         }
         return (double) sum / products.length;
     }
-}*/
+}
