@@ -7,22 +7,22 @@ public class ExerciseFourteen {
         String[] result = formInput.split(";");
 
         ExerciseFourteen helperObjectToConvertAndCalc = new ExerciseFourteen();
-        Product[] avPrice = helperObjectToConvertAndCalc.convertion(result);
+        Products[] avPrice = helperObjectToConvertAndCalc.convertion(result);
 
         System.out.println("Average price of products: " + helperObjectToConvertAndCalc.calculateAverage(avPrice));
     }
 
-    private Product[] convertion(String[] characterToNumber) {
-        Product[] result = new Product[characterToNumber.length];
+    private Products[] convertion(String[] characterToNumber) {
+        Products[] result = new Products[characterToNumber.length];
         for (int i = 0; i < result.length; i++) {
-            result[i] = new Product();
+            result[i] = new Products();
             result[i].price = Double.valueOf(characterToNumber[i]);
             result[i].tax = 0.23d;
         }
         return result;
     }
 
-    public double calculateAverage(Product[] products) {
+    public double calculateAverage(Products[] products) {
         int sum = 0;
         for (int i = 0; i < products.length; i++) {
             sum += products[i].calcGrossPrice();
