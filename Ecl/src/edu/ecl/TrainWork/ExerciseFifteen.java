@@ -2,30 +2,27 @@ package edu.ecl.TrainWork;
 
 public class ExerciseFifteen {
     public static void main(String[] args) {
-        String formInput = "100 ; 200";
+        String formInput = "100 ; 150";
         String[] result = formInput.split(";");
 
-        ExerciseFifteen helperObjectToConvertAndCalc = new ExerciseFifteen();
-        Product[] avPrice = helperObjectToConvertAndCalc.convertion(result);
+        ExerciseFifteen ConvAndCalc = new ExerciseFifteen();
+        Product[] avgPrice = ConvAndCalc.conversion(result);
 
-        System.out.println("Average price of products: " + helperObjectToConvertAndCalc.calculateAverage(avPrice));
+        System.out.println("Average price of products: " + ConvAndCalc.calcAvg(avgPrice));
     }
 
-    private Product[] convertion(String[] characterToNumber) {
+    private Product[] conversion(String[] characterToNumber) {
         Product[] result = new Product[characterToNumber.length];
         for (int i = 0; i < result.length; i++) {
             result[i] = new Product(Double.valueOf(characterToNumber[i]), 0.23d );
-
-            /*result[i].price = Double.valueOf(characterToNumber[i]);
-            result[i].tax = 0.23d;*/
         }
         return result;
     }
 
-    public double calculateAverage(Product[] products) {
+    private double calcAvg(Product[] products) {
         int sum = 0;
         for (int i = 0; i < products.length; i++) {
-            sum += products[i].CalculateGrossPrice();
+            sum += products[i].calcGrossPrice();
         }
         return (double) sum / products.length;
     }

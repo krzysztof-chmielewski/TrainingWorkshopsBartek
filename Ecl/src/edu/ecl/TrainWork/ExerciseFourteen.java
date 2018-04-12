@@ -25,7 +25,7 @@ public class ExerciseFourteen {
     public double calculateAverage(Product[] products) {
         int sum = 0;
         for (int i = 0; i < products.length; i++) {
-            sum += products[i].CalculateGrossPrice();
+            sum += products[i].calcGrossPrice();
         }
         return (double) sum / products.length;
     }
